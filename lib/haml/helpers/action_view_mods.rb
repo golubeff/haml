@@ -125,10 +125,10 @@ module ActionView
         @template_object.send :is_haml?
       end
 
-      unless defined?(ActionView::Helpers) && defined?(ActionView::Helpers::ActiveRecordInstanceTag)
-        alias_method :content_tag_without_haml, :content_tag
-        alias_method :content_tag, :content_tag_with_haml
-      end
+      #unless defined?(ActionView::Helpers) && defined?(ActionView::Helpers::ActiveRecordInstanceTag)
+        #alias_method :content_tag_without_haml, :content_tag
+        #alias_method :content_tag, :content_tag_with_haml
+      #end
     end
 
     if Haml::Util.ap_geq_3?
